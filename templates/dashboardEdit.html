@@ -24,13 +24,16 @@
 	       <tr  class="extra-row bortr" >
 
             
-
-                <td colspan="5" class="backtable">
-                <div>
-                <p class="ctag">keepalive : {{items.config.keepalive}} || enableRequests : {{items.config.enableRequests}}</p>
+           <td class="backtable "></td>
+                <td colspan="3" class="backtable ">
+                <div style="width:100%;    float: left;">
+                <p class="ctag keep" style="float: left;    margin-right: 8px;"><span style="float: left; padding-right:8px;">keepalive :</span> <input type="text" style="width:auto" ng-model="items.config.keepalive"> </p>
+                <p class="ctag" style="float: left;"><span style="float: left; padding-right:8px;">enableRequests :</span> <input type="text"  style="width:auto" ng-model="items.config.enableRequests"> </p>
                 
                 </div>
-                
+                </td>
+                <tr>
+                <td colspan="4" class=" backtable bortr">
                   <p class="ptag">Device Params</p>
                     <table class="table table-condensed table-bordered">
                         <thead>
@@ -52,6 +55,7 @@
                         </tbody>
                     </table>
                 </td>
+                
             </tr>
 
             <tr ng-repeat-end	 class="extra-row bortr" >

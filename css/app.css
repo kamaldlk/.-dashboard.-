@@ -110,3 +110,9 @@ input[type="text"]:focus {
   border: solid 1px #707070;
   box-shadow: 0 0 5px 1px #969696;
 }
+.kee{
+  float: left;    margin-right: 8px;
+}
+.spantag{
+
+}
