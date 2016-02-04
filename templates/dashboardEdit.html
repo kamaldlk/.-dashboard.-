@@ -1,0 +1,90 @@
+
+ <table>
+         <thead>
+            <tr>
+              
+                <th>version</th>
+                <th>percentage</th>
+                <th>created</th>
+                <th>modified</th>
+               
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr  ng-class-odd="'odd'" ng-class-even="'even'"  class="main-row" >
+              
+                <td><input class="style-1" type="text" ng-model="items.version"> </td>
+                <td><input type="text" ng-model="items.percentage"></td>
+                <td><input type="text" ng-model="items.created"></td>
+                <td><input type="text" ng-model="items.modified"></td>
+             
+            </tr>
+
+	       <tr  class="extra-row bortr" >
+
+            
+
+                <td colspan="5" class="backtable">
+                <div>
+                <p class="ctag">keepalive : {{items.config.keepalive}} || enableRequests : {{items.config.enableRequests}}</p>
+                
+                </div>
+                
+                  <p class="ptag">Device Params</p>
+                    <table class="table table-condensed table-bordered">
+                        <thead>
+                        
+                            <tr>
+                                <th style="width:15%;">Params</th>
+                                <th style="width:15%;" ng-repeat="deviceConfigs in items.config.deviceconfig">{{deviceConfigs.deviceclass}}</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="deviceCfgKey in getKeys(items.config.deviceconfig[0],'deviceclass') track by $index">
+                                <td>{{deviceCfgKey}}</td>
+                                  <td style="width:15%;" ng-repeat="deviceConfigs in items.config.deviceconfig">	<input type="text" ng-model="deviceConfigs[deviceCfgKey]">
+                                  </td> 
+                              
+                            </tr>
+                                                       
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+
+            <tr ng-repeat-end	 class="extra-row bortr" >
+
+            
+
+                <td colspan="5" class="backtable">
+                  <p class="ptag">Network Params</p>
+                    <table class="table table-condensed table-bordered">
+                        <thead>
+                        
+                        <tr>
+                            <th style="width:15%;">Params</th>
+                             <th style="width:15%;" ng-repeat="networkConfigs in items.config.networkconfig">{{networkConfigs.networkclass}}</th>
+                          
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="networkConfigKey in getKeys(items.config.networkconfig[0],'networkclass') track by $index">
+                          <td>{{networkConfigKey}}</td>
+                             <td style="width:15%;" ng-repeat="networkConfigs in items.config.networkconfig"><input type="text" ng-model="networkConfigs[networkConfigKey]"</td>
+                          
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>   
+    <br>
+			<div class='center'>
+                  <button class='btn btn-glow' ng-click="updateDashboard(items)">Update</button>
+                  <button class='btn btn-glow' ng-click="cancel()">Cancel</button>
+                </div> 

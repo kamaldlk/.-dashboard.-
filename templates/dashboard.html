@@ -1,0 +1,87 @@
+
+ <table>
+         <thead>
+            <tr>
+              
+                <th>version</th>
+                <th>percentage</th>
+                <th>created</th>
+                <th>modified</th>
+                <th class="center">Action</th>
+                
+            </tr>
+        </thead>
+        <tbody ng-repeat="item in items">
+            <tr  ng-class-odd="'odd'" ng-class-even="'even'"  class="main-row" ng-click="toggleDetail($index)">
+              
+                <td  editable-version="item.version">{{item.version}}</td>
+                <td>{{item.percentage}}</td>
+                <td>{{item.created}}</td>
+                <td>{{item.modified}}</td>
+              <td> <div class='center'>
+                  <button class='btn btn-glow' ng-click="editItems(item)">Edit</button>
+                </div></td>
+
+            </tr>
+
+	       <tr  class="extra-row bortr" ng-show="activePosition == $index">
+
+            
+
+                <td colspan="5" class="backtable">
+                <div>
+                <p class="ctag">keepalive : {{item.config.keepalive}} || enableRequests : {{item.config.enableRequests}}</p>
+                
+                </div>
+                
+                  <p class="ptag">Device Params</p>
+                    <table class="table table-condensed table-bordered">
+                        <thead>
+                        
+                            <tr>
+                                <th style="width:15%;">Params</th>
+                                <th style="width:15%;" ng-repeat="deviceConfigs in item.config.deviceconfig">{{deviceConfigs.deviceclass}}</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="deviceCfgKey in getKeys(item.config.deviceconfig[0],'deviceclass') track by $index">
+                                <td>{{deviceCfgKey}}</td>
+                                  <td style="width:15%;" ng-repeat="deviceConfigs in item.config.deviceconfig">{{deviceConfigs[deviceCfgKey]}}</td> 
+                              
+                            </tr>
+                                                       
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+
+            <tr ng-repeat-end	 class="extra-row bortr" ng-show="activePosition == $index">
+
+            
+
+                <td colspan="5" class="backtable">
+                  <p class="ptag">Network Params</p>
+                    <table class="table table-condensed table-bordered">
+                        <thead>
+                        
+                        <tr>
+                            <th style="width:15%;">Params</th>
+                             <th style="width:15%;" ng-repeat="networkConfigs in item.config.networkconfig">{{networkConfigs.networkclass}}</th>
+                          
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr ng-repeat="networkConfigKey in getKeys(item.config.networkconfig[0],'networkclass') track by $index">
+                          <td>{{networkConfigKey}}</td>
+                             <td style="width:15%;" ng-repeat="networkConfigs in item.config.networkconfig">{{networkConfigs[networkConfigKey]}}</td>
+                          
+                        </tr>
+                            
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>   
