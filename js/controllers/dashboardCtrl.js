@@ -34,5 +34,7 @@ apiService.dashboardDetails().success(function(data){
         $state.go("dashboardEdit");
     };
                 
-
+       $scope.addItems = function () {
+        $state.go("dashboardAdd");
+        }
 }]);

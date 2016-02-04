@@ -14,5 +14,6 @@ angular.module("dashboard").config(['$stateProvider', '$urlRouterProvider',
                 controller: 'dashboardEditCtrl'
             })
 
+         
     }
 ]);

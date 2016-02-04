@@ -1,36 +1,36 @@
 table {
   width:100%;
-  border-collapse: collapse;
+  border-collapse: collapse !important;
 }
 
 th, td {
-  border: 1px solid #ddd;
-  padding-left: 7px;
-  text-align: left;
+  border: 1px solid #ddd !important;
+  padding-left: 7px !important;
+  text-align: left !important;
 }
 
 th {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  background-color: #3A523A;
-  color: white;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  background-color: #3A523A !important;
+  color: white !important;
 }
 
 td {
-  padding-top: 7px;
-  padding-bottom: 7px;  
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
 }
 
 tr:nth-child(even) {
-  background-color: #E5E5E5;
+  background-color: #E5E5E5 !important;
 }
 
 tr:last-child td{
-  border: 0;
+  border: 0 !important;
 }
 
 tr:hover {
-  background-color: #D1D1D1;
+  background-color: #D1D1D1 !important;
 }
 
 .backtable{
@@ -114,5 +114,5 @@ input[type="text"]:focus {
   float: left;    margin-right: 8px;
 }
 .spantag{
-
+float: left; padding-right:8px;
 }
