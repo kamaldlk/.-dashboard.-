@@ -1,4 +1,4 @@
-<div style="width: 100%; background-color: #3A523A;">
+<div style="width: 100%; background-color: #3A523A;" >
 <button style="position: relative;left: 90%;width: 10%;" class='btn btn-info' data-toggle="modal" data-target="#fullModal">Add</button>
 </div>
  <table>
@@ -114,44 +114,44 @@
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Parameter</label>
       <div class="col-sm-10">
-       <input type="text" class="form-control"  >
+       <input type="text" class="form-control" ng-model="addItems.deviceParameter"  >
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" >2011</label>
+      <label class="control-label col-sm-2"  >2011</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control"  >
+        <input type="text" class="form-control" ng-model="addItems.y_2011" >
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" >2012</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control"  >
+        <input type="text" class="form-control" ng-model="addItems.y_2012" >
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" >2013</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control"  >
+        <input type="text" class="form-control" ng-model="addItems.y_2013" >
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" >2014</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control" >
+        <input type="text" class="form-control" ng-model="addItems.y_2014">
       </div>
     </div>
    <div class="form-group">
       <label class="control-label col-sm-2" >Default</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control" >
+        <input type="text" class="form-control" ng-model="addItems.default">
       </div>
     </div>
 
   </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" >Confirm</button>
+          <button type="button" class="btn btn-default" ng-click="addItemsCal(addItems)">Confirm</button>
         </div>
       </div>
       
@@ -177,38 +177,38 @@
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Parameter</label>
       <div class="col-sm-10">
-       <input type="text" class="form-control"  >
+       <input type="text" class="form-control" ng-model="addItems.netparameter" >
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" >Good</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control"  >
+        <input type="text" class="form-control"  ng-model="addItems.good">
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" >Normal</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control"  >
+        <input type="text" class="form-control" ng-model="addItems.normal" >
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" >Poor</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control"  >
+        <input type="text" class="form-control"  ng-model="addItems.poor">
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" >Excellent</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control" >
+        <input type="text" class="form-control" ng-model="addItems.excellent">
       </div>
     </div>
    
   </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" >Confirm</button>
+          <button type="button" class="btn btn-default" ng-click="addItemsCal(addItems)">Confirm</button>
         </div>
       </div>
       
@@ -229,93 +229,93 @@
          <div class="form-group">
       <label class="control-label col-sm-2" for="email">Version</label>
       <div class="col-sm-10">
-       <input type="text" class="form-control"  >
-      </div>
+       <input type="text" class="form-control" ng-model="addItems.version">
+    </div>
     </div>
      <div class="form-group">
       <label class="control-label col-sm-2" for="email">Percentage</label>
       <div class="col-sm-10">
-       <input type="text" class="form-control"  >
+       <input type="text" class="form-control"  ng-model="addItems.percentage">
       </div>
     </div>
      <div class="form-group">
-      <label class="control-label col-sm-2" for="email">created</label>
+      <label class="control-label col-sm-2" for="email">Created</label>
       <div class="col-sm-10">
-       <input type="text" class="form-control"  >
+       <input type="text" class="form-control" ng-model="addItems.created" >
       </div>
     </div>
      <div class="form-group">
-      <label class="control-label col-sm-2" for="email">modified</label>
+      <label class="control-label col-sm-2" for="email">Modified</label>
       <div class="col-sm-10">
-       <input type="text" class="form-control"  >
+       <input type="text" class="form-control" ng-model="addItems.modified" >
       </div>
     </div>
       <h4 class="modal-title">Add Device Configuration</h4>
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Parameter</label>
       <div class="col-sm-10">
-       <input type="text" class="form-control"  >
+       <input type="text" class="form-control" ng-model="addItems.deviceParameter" >
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" >Good</label>
+      <label class="control-label col-sm-2" >2011</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control"  >
+        <input type="text" class="form-control" ng-model="addItems.y_2011"  >
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" >Normal</label>
+      <label class="control-label col-sm-2" >2012</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control"  >
+        <input type="text" class="form-control" ng-model="addItems.y_2012" >
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" >Poor</label>
+      <label class="control-label col-sm-2" >2013</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control"  >
+        <input type="text" class="form-control" ng-model="addItems.y_2013" >
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" >Excellent</label>
+      <label class="control-label col-sm-2" >2014</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control" >
+        <input type="text" class="form-control" ng-model="addItems.y_2014">
       </div>
     </div>
    <h4 class="modal-title">Add Network Configuration</h4>
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Parameter</label>
       <div class="col-sm-10">
-       <input type="text" class="form-control"  >
+       <input type="text" class="form-control"  ng-model="addItems.netParameter">
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" >Good</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control"  >
+        <input type="text" class="form-control" ng-model="addItems.good" >
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" >Normal</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control"  >
+        <input type="text" class="form-control" ng-model="addItems.normal" >
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" >Poor</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control"  >
+        <input type="text" class="form-control" ng-model="addItems.poor" >
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" >Excellent</label>
       <div class="col-sm-10">          
-        <input type="text" class="form-control" >
+        <input type="text" class="form-control" ng-model="addItems.excellent">
       </div>
     </div>
   </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" >Confirm</button>
+          <button type="button" class="btn btn-default" ng-click="addItemsCal(addItems)" >Confirm</button>
         </div>
       </div>
     </div>

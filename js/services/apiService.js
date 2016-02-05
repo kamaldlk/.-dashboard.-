@@ -26,11 +26,14 @@ angular.module('dashboard.services')
 
 //dashBoard details Add Api
 
- 	this.dashboardAdd = function() {
+ 	this.dashboardAdd = function(items) {
+
+    console.log("items",  items);
+
     return	$http.post("json/dashboard.json")
 		.success(function(response)
    		 {
- 			return response;
+ 		   	return response;
    		 });
 
      }

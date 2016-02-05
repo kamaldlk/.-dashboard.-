@@ -2,7 +2,7 @@
 angular.module("dashboard.controllers")
     .controller('dashboardCtrl', ["$scope", "$state","$rootScope","apiService",
             function($scope, $state, $rootScope,apiService) {
-      
+     $scope.addItems={};
 
 apiService.dashboardDetails().success(function(data){
 
@@ -34,7 +34,16 @@ apiService.dashboardDetails().success(function(data){
         $state.go("dashboardEdit");
     };
                 
-       $scope.addItems = function () {
-        $state.go("dashboardAdd");
-        }
+
+
+       $scope.addItemsCal = function (items) {
+       
+          apiService.dashboardAdd(items).success(function(data){
+
+              
+              //console.log("items",  data);
+            
+            });
+
+        };
 }]);
