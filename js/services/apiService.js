@@ -30,8 +30,8 @@ angular.module('dashboard.services')
 
     console.log("items",  items);
 
-    return	$http.post("json/dashboard.json")
-		.success(function(response)
+    return	$http.post("json/dashboard.json",items)
+		 .success(function(response)
    		 {
  		   	return response;
    		 });
