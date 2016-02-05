@@ -4,11 +4,16 @@ angular.module('dashboard.services')
 //dashBoard details Get Api
  
     this.dashboardDetails = function() {
-    return	$http.get("json/dashboard.json")
-		.success(function(response)
-   		 {
- 			return response;
-   		 });
+    
+    return  $http({
+            method: 'GET',
+            url: 'json/dashboard.json',
+            }).then(function successCallback(response) {
+
+              return response.data;
+            }, function errorCallback(response) {
+              return response.data; 
+        });
 
      }
      
@@ -16,11 +21,15 @@ angular.module('dashboard.services')
      
    this.dashboardUpdate = function(items) {
    	  console.log("items Updated :) ",  items);
-    return	$http.post("json/dashboard.json")
-		.success(function(response)
-   		 {
- 			return response;
-   		 });
+   return $http({
+            method: 'UPDATE',
+            url: 'json/dashboard.json',
+            data:items
+          }).then(function successCallback(response) {
+              return response.data;
+            }, function errorCallback(response) {
+              return response.data; 
+        });
 
      }
 
@@ -28,26 +37,61 @@ angular.module('dashboard.services')
 
  	this.dashboardAdd = function(items) {
 
-    console.log("items",  items);
+    console.log("dashboard Add Full Items",  items);
 
-    return	$http.post("json/dashboard.json",items)
-		 .success(function(response)
-   		 {
- 		   	return response;
-   		 });
+    return	$http({
+            method: 'POST',
+            url: 'json/dashboard.json',
+            data:items
+          }).then(function successCallback(response) {
+              return response.data;
+            }, function errorCallback(response) {
+              return response.data; 
+        });
+    }
 
-     }
-     
-     
+      this.dashboardAddDevice = function(items) {
+
+    console.log("Add Device items",  items);
+
+    return  $http({
+            method: 'POST',
+            url: 'json/dashboard.json',
+            data:items
+          }).then(function successCallback(response) {
+              return response.data;
+            }, function errorCallback(response) {
+              return response.data; 
+        });
+    }
+
+      this.dashboardAddNet = function(items) {
+
+    console.log("Add net items",  items);
+
+    return  $http({
+            method: 'POST',
+            url: 'json/dashboard.json',
+            data:items
+          }).then(function successCallback(response) {
+              return response.data;
+            }, function errorCallback(response) {
+              return response.data; 
+        });
+    }
+
 //dashBoard details Detete Api
      
      this.dashboardDelete = function() {
-    return	$http.delete("json/dashboard.json")
-		.success(function(response)
-   		 {
- 			return response;
-   		 });
-
+    return	$http({
+            method: 'DELETE',
+            url: 'json/dashboard.json',
+            data:items
+          }).then(function successCallback(response) {
+              return response.data;
+            }, function errorCallback(response) {
+              return response.data; 
+        });
      }
 
 

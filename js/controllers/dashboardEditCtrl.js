@@ -28,7 +28,7 @@ angular.module("dashboard.controllers")
     }
 
      $scope.updateDashboard = function(items){
-      apiService.dashboardUpdate(items).success(function(data){
+      apiService.dashboardUpdate(items).then(function(data){
       
       })
         $state.go("dashboard");

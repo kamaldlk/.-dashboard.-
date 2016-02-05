@@ -5,10 +5,10 @@ angular.module("dashboard.controllers")
     
 $scope.addItems={};
 
-apiService.dashboardDetails().success(function(data){
+apiService.dashboardDetails().then(function(data){
 
 	  $scope.items = data;
-	   console.log("ites",  $scope.items);
+	   
 })
 
    
@@ -17,7 +17,7 @@ apiService.dashboardDetails().success(function(data){
     };
 
     $scope.getKeys = function(obj,deleteKey){
-    	//console.log('incomign obj ',obj);
+
     	var deviceclassRemove = angular.copy(obj);
     	if(deleteKey){
     		 delete deviceclassRemove[deleteKey];
@@ -39,7 +39,29 @@ apiService.dashboardDetails().success(function(data){
 
        $scope.addItemsCal = function (items) {
        
-          apiService.dashboardAdd(items).success(function(data){
+          apiService.dashboardAdd(items).then(function(data){
+
+              
+              //console.log("items",  data);
+            
+            });
+            $scope.addItems={}
+        };
+
+        $scope.addDeviceItems= function (items) {
+       
+          apiService.dashboardAdd(items).then(function(data){
+
+              
+              //console.log("items",  data);
+            
+            });
+            $scope.addItems={}
+        };
+
+        $scope.addNetItems= function (items) {
+       
+          apiService.dashboardAdd(items).then(function(data){
 
               
               //console.log("items",  data);
