@@ -7,8 +7,17 @@ angular.module("dashboard.controllers")
      $scope.message = args;
     
      });*/
+    $rootScope.$on('eventNames', function (event, args) {
+ $scope.message = args.message;
+ console.log($scope.message);
+ });
+      console.log("test1");
          $scope.items = $rootScope.editItems;           
- 
+      $rootScope.$on('eventName', function (event, args) {
+        console.log("test2");
+     $scope.message = args;
+     console.log("broadCost ::: ",$scope.message);
+ });
 
      $scope.getKeys = function(obj,deleteKey){
         //console.log('incomign obj ',obj);
