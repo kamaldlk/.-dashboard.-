@@ -29,6 +29,9 @@ apiService.dashboardDetails().then(function(data){
     }
 
 	 $scope.editItems = function (items) {
+
+        $rootScope.$broadcast('eventName', items);
+ $rootScope.$emit('eventNames', { message: "msg" });
         $rootScope.editItems = items;
         // $scope.$emit('eventName', $scope.editItems);
       
